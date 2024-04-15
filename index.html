@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
     <style>
-    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Divide la página en dos columnas */
+            gap: 20px; /* Espacio entre las columnas */
         }
         nav {
+            grid-column: span 2; /* Hace que el menú ocupe las dos columnas */
             background-color: #343a40;
             color: white;
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -37,38 +40,49 @@
         nav ul li a:hover {
             color: #111a74; 
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            padding: 20px 0;
+        .image-container {
+            padding: 20px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px; 
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 100%; /* La imagen ocupa todo el ancho disponible */
+            max-height: 80vh; /* Limita la altura de la imagen para no desbordar la pantalla */
+        }
+        .text-container {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .text-grande {
             text-align: center;
             font-size: 24px;
-            padding: 20px;
-            background-color: white;
-            margin: 0 auto;
-            max-width: 600px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            
+            max-width: 90%; /* Limita el ancho del texto */
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#">Página 1</a></li>
-            <li><a href="#">Página 2</a></li>
-            <li><a href="#">Página 3</a></li>
+            <li><a href="pagina1.html">Página 1</a></li>
+            <li><a href="pagina2.html">Página 2</a></li>
+            <li><a href="pagina3.html">Página 3</a></li>
         </ul>
     </nav>
-    <img src="C:\Users\E FIX\Desktop\LABORATORIO6\Laboratorio-6\cabecera1.png" alt="Descripción de la imagen">
-    <div class="text-grande">
-        Este es un texto grande (HOLA MUNDO).
+    <div class="image-container">
+        <img src="C:\Users\E FIX\Desktop\LABORATORIO6\Laboratorio-6\cabecera1.png" alt="Descripción de la imagen">
+    </div>
+    <div class="text-container">
+        <div class="text-grande">
+            Este es un texto grande (HOLA MUNDO).
+        </div>
     </div>
 </body>
 </html>
